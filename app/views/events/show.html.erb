@@ -1,24 +1,24 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
+  <strong>バンド名:</strong>
   <%= @event.title %>
 </p>
 
 <p>
-  <strong>Description:</strong>
+  <strong>代表者:</strong>
   <%= @event.description %>
 </p>
 
 <p>
-  <strong>Start date:</strong>
-  <%= @event.start_date %>
+  <strong>日付:</strong>
+  <%= @event.get_date %>
 </p>
 
 <p>
-  <strong>End date:</strong>
-  <%= @event.end_date %>
+  <strong>時限:</strong>
+  <%= @event.define_gen %>
 </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+<%= link_to '編集', edit_event_path(@event) %> |
+<%= link_to '戻る', events_path %>

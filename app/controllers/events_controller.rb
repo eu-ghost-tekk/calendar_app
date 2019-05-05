@@ -24,11 +24,14 @@ class EventsController < ApplicationController
   # POST /events
   # POST /events.json
   def create
-    @event = Event.new(event_params)
+    @event = Event.new(title: event_params[:title],
+                       description: event_params[:description],
+                       start_date: make_start_date(event_params),
+                       end_date: make_end_date(event_params))
 
     respond_to do |format|
       if @event.save
-        format.html { redirect_to @event, notice: 'Event was successfully created.' }
+        format.html { redirect_to @event, notice: '予定を登録しました．' }
         format.json { render :show, status: :created, location: @event }
       else
         format.html { render :new }
@@ -42,7 +45,7 @@ class EventsController < ApplicationController
   def update
     respond_to do |format|
       if @event.update(event_params)
-        format.html { redirect_to @event, notice: 'Event was successfully updated.' }
+        format.html { redirect_to @event, notice: '予定を更新しました．' }
         format.json { render :show, status: :ok, location: @event }
       else
         format.html { render :edit }
@@ -56,7 +59,7 @@ class EventsController < ApplicationController
   def destroy
     @event.destroy
     respond_to do |format|
-      format.html { redirect_to events_url, notice: 'Event was successfully destroyed.' }
+      format.html { redirect_to events_url, notice: '予定を削除しました．' }
       format.json { head :no_content }
     end
   end
@@ -69,6 +72,19 @@ class EventsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def event_params
-      params.require(:event).permit(:title, :description, :start_date, :end_date)
+      params.require(:event).permit(:title, :description, :start_date, :s1)
+    end
+
+    def make_start_date(ep)
+      DateTime.parse("#{ep["start_date(1i)"]}/#{ep["start_date(2i)"]}/#{ep["start_date(3i)"]} #{ep[:s1]}")
+    end
+
+    def make_end_date(event_params)
+      start_date = make_start_date(event_params)
+      if event_params[:s1] == "12:00" || "21:10"
+        start_date + 1.hour
+      else
+        start_date + 1.5.hour
+      end
     end
 end

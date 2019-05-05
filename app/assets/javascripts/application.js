@@ -50,6 +50,7 @@ $(function () {
                 },
 
                 defaultView: 'agendaWeek',
+                timezone: 'Asia/Tokyo',
                 //終了時刻がないイベントの表示間隔
                 defaultTimedEventDuration: '03:00:00',
                 buttonText: {
