@@ -12,16 +12,12 @@
 //
 //= require rails-ujs
 //= require activestorage
-//= require fullcalendar
-//= require moment
-//= require jquery
-//= require fullcalendar/lang/ja
-//
+//= require turbolinks
 //= require_tree .
-
-
-...
-
+//= require jquery
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/lang/ja
 $(function () {
     // 画面遷移を検知
     $(document).on('turbolinks:load', function () {
@@ -41,7 +37,7 @@ $(function () {
             $(document).on('turbolinks:before-cache', clearCalendar);
 
             $('#calendar').fullCalendar({
-                events: '/events.json'
+                events: '/events.json',
                 //カレンダー上部を年月で表示させる
                 titleFormat: 'YYYY年 M月',
                 //曜日を日本語表示
@@ -52,6 +48,8 @@ $(function () {
                     center: 'title',
                     right: 'today prev,next'
                 },
+
+                defaultView: 'agendaWeek',
                 //終了時刻がないイベントの表示間隔
                 defaultTimedEventDuration: '03:00:00',
                 buttonText: {
@@ -70,6 +68,7 @@ $(function () {
                 eventColor: '#63ceef',
                 //イベントの文字色を変える
                 eventTextColor: '#000000',
+
             });
         }
     });
