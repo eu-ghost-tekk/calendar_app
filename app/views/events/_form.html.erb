@@ -12,24 +12,29 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :title %>
+    <%= form.label :バンド名 %>
     <%= form.text_field :title %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+    <%= form.label :代表者 %>
+    <%= form.text_field :description %>
   </div>
 
   <div class="field">
-    <%= form.label :start_date %>
-    <%= form.datetime_select :start_date %>
+    <%= form.label :時間 %>
+    <%= form.datetime_select(:start_date,
+        discard_hour: true,
+        use_month_numbers: true,
+        date_separator: '-')
+    %>
+    <%= select_tag('s1', options_for_select(["1", "2", "3", "4", "5", "6", "7", "7'"])) %><%= '限' %>
   </div>
 
-  <div class="field">
-    <%= form.label :end_date %>
-    <%= form.datetime_select :end_date %>
-  </div>
+<%#    <div class="field">                                    %>
+<%#   <%= form.label :end_date                                %>
+<%#   <%= form.datetime_select :end_date, {discard_hour:true} %>
+<%#  </div>                                                   %>
 
   <div class="actions">
     <%= form.submit %>
