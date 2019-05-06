@@ -11,14 +11,14 @@
 // about supported directives.
 //
 //= require jquery
+//= require moment
+//= require fullcalendar
+//= require fullcalendar/lang/ja
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
 //= require_tree .
 
-//= require moment
-//= require fullcalendar
-//= require fullcalendar/lang/ja
 $(function () {
     // 画面遷移を検知
     $(document).on('turbolinks:load', function () {
