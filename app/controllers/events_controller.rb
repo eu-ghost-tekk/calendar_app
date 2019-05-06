@@ -44,7 +44,10 @@ class EventsController < ApplicationController
   # PATCH/PUT /events/1.json
   def update
     respond_to do |format|
-      if @event.update(event_params)
+      if @event.update(title: event_params[:title],
+                      description: event_params[:description],
+                      start_date: make_start_date(event_params),
+                      end_date: make_end_date(event_params))
         format.html { redirect_to @event, notice: '予定を更新しました．' }
         format.json { render :show, status: :ok, location: @event }
       else
