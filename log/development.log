@@ -8011,3 +8011,404 @@ Processing by EventsController#index as JSON
 Completed 200 OK in 27ms (Views: 22.2ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/events" for ::1 at 2019-05-06 23:13:13 +0900
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/mac/.rvm/gems/ruby-2.4.5/gems/activerecord-5.2.3/lib/active_record/log_subscriber.rb:98
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 579ms (Views: 567.7ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557151994340" for ::1 at 2019-05-06 23:13:14 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557151994340"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.3ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (1.3ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (28.8ms)
+Completed 200 OK in 40ms (Views: 37.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3/edit" for ::1 at 2019-05-06 23:13:16 +0900
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (7.6ms)
+  Rendered events/edit.html.erb within layouts/application (9.2ms)
+Completed 200 OK in 62ms (Views: 58.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:13:18 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 50ms (Views: 48.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557151994341" for ::1 at 2019-05-06 23:13:18 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557151994341"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.2ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/index.json.jbuilder (18.1ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/new" for ::1 at 2019-05-06 23:13:18 +0900
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (7.3ms)
+  Rendered events/new.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 136ms (Views: 130.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:13:20 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 84ms (Views: 80.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557151994342" for ::1 at 2019-05-06 23:13:20 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557151994342"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (3.3ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.8ms)
+  Rendered events/_event.json.jbuilder (2.2ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (36.1ms)
+Completed 200 OK in 65ms (Views: 49.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3" for ::1 at 2019-05-06 23:13:21 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (3.4ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 41ms (Views: 34.2ms | ActiveRecord: 3.4ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:13:22 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 49ms (Views: 46.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557151994343" for ::1 at 2019-05-06 23:13:22 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557151994343"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.0ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (12.8ms)
+Completed 200 OK in 31ms (Views: 27.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3.html" for ::1 at 2019-05-06 23:13:24 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:13:25 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 66ms (Views: 57.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557151994344" for ::1 at 2019-05-06 23:13:25 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557151994344"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.1ms)
+  Rendered events/_event.json.jbuilder (0.9ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (13.0ms)
+Completed 200 OK in 34ms (Views: 29.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:21:54 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.5ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 201ms (Views: 198.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557152514769" for ::1 at 2019-05-06 23:21:54 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557152514769"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.1ms)
+  Rendered events/_event.json.jbuilder (2.5ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/index.json.jbuilder (17.5ms)
+Completed 200 OK in 34ms (Views: 28.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3" for ::1 at 2019-05-06 23:22:04 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 33ms (Views: 29.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:06 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 50ms (Views: 43.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/3/edit" for ::1 at 2019-05-06 23:22:07 +0900
+Processing by EventsController#edit as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/edit.html.erb within layouts/application
+  Rendered events/_form.html.erb (4.0ms)
+  Rendered events/edit.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 48ms (Views: 39.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/events/3" for ::1 at 2019-05-06 23:22:08 +0900
+Processing by EventsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wBWmMXhQEXEvUSKSOEvVz+wG/tkzAfZb6FUVpp/5+ZQXJ2NWdx8hEo5YcGa5VkIzzCBZYeAietfeR+d2Nf0a/Q==", "event"=>{"title"=>"toe", "description"=>"023", "start_date(1i)"=>"2019", "start_date(2i)"=>"5", "start_date(3i)"=>"5", "s1"=>"08:50"}, "commit"=>"更新する", "id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:47
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:47
+Redirected to http://localhost:3000/events/3
+Completed 302 Found in 6ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/events/3" for ::1 at 2019-05-06 23:22:08 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:10 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 50ms (Views: 48.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events/new" for ::1 at 2019-05-06 23:22:11 +0900
+Processing by EventsController#new as HTML
+  Rendering events/new.html.erb within layouts/application
+  Rendered events/_form.html.erb (3.2ms)
+  Rendered events/new.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 43ms (Views: 39.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/events" for ::1 at 2019-05-06 23:22:12 +0900
+Processing by EventsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mTa440tJMfSTUpw5CegVGk+PR++zf8fJIs8xG9J/9z66VgKz0HDkMTgjDJ3v28fH5bejKGnDBHxmjupq15jtuQ==", "event"=>{"title"=>"", "description"=>"", "start_date(1i)"=>"2019", "start_date(2i)"=>"5", "start_date(3i)"=>"6", "s1"=>"08:50"}, "commit"=>"登録する"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:33
+  [1m[36mEvent Create (1.0ms)[0m  [1m[32mINSERT INTO "events" ("title", "description", "start_date", "end_date", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", ""], ["description", ""], ["start_date", "2019-05-06 08:50:00"], ["end_date", "2019-05-06 09:50:00"], ["created_at", "2019-05-06 14:22:12.244125"], ["updated_at", "2019-05-06 14:22:12.244125"]]
+  ↳ app/controllers/events_controller.rb:33
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:33
+Redirected to http://localhost:3000/events/10
+Completed 302 Found in 8ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/events/10" for ::1 at 2019-05-06 23:22:12 +0900
+Processing by EventsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  Rendering events/show.html.erb within layouts/application
+  Rendered events/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 52ms (Views: 48.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:14 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.1ms)
+
+
+Started DELETE "/events/10" for ::1 at 2019-05-06 23:22:17 +0900
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"YKAvb8sf4ysI20Ie+FgVwnpOKV4OOUMhwbNOuZn4Ftj/ESoUcE6ix0E41WYkeuVoS7OeAvLjqLA4HtgiBI8i8w==", "id"=>"10"}
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+  [1m[36mEvent Destroy (2.7ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 10]]
+  ↳ app/controllers/events_controller.rb:63
+  [1m[35m (0.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+Redirected to http://localhost:3000/events
+Completed 302 Found in 6ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:17 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557152537793" for ::1 at 2019-05-06 23:22:17 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557152537793"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.5ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (1.5ms)
+  Rendered events/index.json.jbuilder (14.5ms)
+Completed 200 OK in 28ms (Views: 22.6ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/9" for ::1 at 2019-05-06 23:22:20 +0900
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wrImjoBF3AJxP9aEisDbfyLFvi4RWfD7EfmEpmccZrZdAyP1OxSd7jjcQfxW4ivVEzgJcu2DG2roVBI9+mtSnQ==", "id"=>"9"}
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+  [1m[36mEvent Destroy (0.5ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/events_controller.rb:63
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+Redirected to http://localhost:3000/events
+Completed 302 Found in 5ms (ActiveRecord: 1.5ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:20 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 38ms (Views: 35.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557152540303" for ::1 at 2019-05-06 23:22:20 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557152540303"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.2ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.1ms)
+  Rendered events/_event.json.jbuilder (1.7ms)
+  Rendered events/_event.json.jbuilder (0.7ms)
+  Rendered events/_event.json.jbuilder (0.6ms)
+  Rendered events/index.json.jbuilder (16.5ms)
+Completed 200 OK in 30ms (Views: 26.4ms | ActiveRecord: 0.2ms)
+
+
+Started DELETE "/events/8" for ::1 at 2019-05-06 23:22:22 +0900
+Processing by EventsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"jg5ij1/XQDPJQLOEUXTO1kQQ5zCQVPkqIbJUsxzp+AYRv2f05IYB34CjJPyNVj58de1QbGyOErvYH8IogZ7MLQ==", "id"=>"8"}
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT  "events".* FROM "events" WHERE "events"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/events_controller.rb:73
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+  [1m[36mEvent Destroy (0.4ms)[0m  [1m[31mDELETE FROM "events" WHERE "events"."id" = ?[0m  [["id", 8]]
+  ↳ app/controllers/events_controller.rb:63
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/events_controller.rb:63
+Redirected to http://localhost:3000/events
+Completed 302 Found in 9ms (ActiveRecord: 2.7ms)
+
+
+Started GET "/events" for ::1 at 2019-05-06 23:22:22 +0900
+Processing by EventsController#index as HTML
+  Rendering events/index.html.erb within layouts/application
+  [1m[36mEvent Load (0.1ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.html.erb:17
+  Rendered events/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 98ms (Views: 95.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/events.json?start=2019-05-05T00%3A00%3A00&end=2019-05-12T00%3A00%3A00&timezone=Asia%2FTokyo&_=1557152542865" for ::1 at 2019-05-06 23:22:22 +0900
+Processing by EventsController#index as JSON
+  Parameters: {"start"=>"2019-05-05T00:00:00", "end"=>"2019-05-12T00:00:00", "timezone"=>"Asia/Tokyo", "_"=>"1557152542865"}
+  Rendering events/index.json.jbuilder
+  [1m[36mEvent Load (0.3ms)[0m  [1m[34mSELECT "events".* FROM "events"[0m
+  ↳ app/views/events/index.json.jbuilder:1
+  Rendered events/_event.json.jbuilder (1.2ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/_event.json.jbuilder (0.5ms)
+  Rendered events/index.json.jbuilder (9.2ms)
+Completed 200 OK in 21ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
