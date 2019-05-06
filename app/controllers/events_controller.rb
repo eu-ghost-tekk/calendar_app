@@ -84,10 +84,10 @@ class EventsController < ApplicationController
 
     def make_end_date(event_params)
       start_date = make_start_date(event_params)
-      if event_params[:s1] == "12:00" || "21:10"
-        start_date + 1.hour
+      if event_params[:s1].in?(["12:00", "21:10"])
+        start_date + 1.hours
       else
-        start_date + 1.5.hour
+        start_date + 1.hour + 30.minute
       end
     end
 end
