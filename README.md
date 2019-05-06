@@ -22,3 +22,7 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+2019/05/06
+application.rb: add -> config.assets.initialize_on_precompile = false
+production.rb: config.assets.compile = true ->   config.assets.compile = false
