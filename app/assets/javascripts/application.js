@@ -36,6 +36,7 @@ $(document).on('turbolinks:load', function () {
 				center: 'title',
 				right: 'today prev,next'
 			},
+			firstDay: 1,
 
 			defaultView: 'agendaWeek',
 			timezone: 'Asia/Tokyo',
