@@ -36,8 +36,8 @@ $(document).on('turbolinks:load', function () {
 				center: 'title',
 				right: 'today prev,next'
 			},
+			//月曜始まり
 			firstDay: 1,
-
 			defaultView: 'agendaWeek',
 			timezone: 'Asia/Tokyo',
 			//終了時刻がないイベントの表示間隔

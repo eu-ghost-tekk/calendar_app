@@ -1,11 +1,16 @@
 <p id="notice"><%= notice %></p>
-
 <h1>練習表</h1>
+
+<div id="calendar"></div>
+
+<%
+=begin
+%>
 
 <table>
   <thead>
     <tr>
-      <th>バンド名</th>
+      <th>バンド</th>
       <th>代表者</th>
       <th>日付</th>
       <th>時限</th>
@@ -28,8 +33,10 @@
   </tbody>
 </table>
 
+<%
+=end
+%>
+
 <br>
 
 <%= link_to '練習の登録', new_event_path %>
-
-<div id="calendar"></div>
